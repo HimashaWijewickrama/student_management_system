@@ -29,8 +29,8 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->name }}</td>
-                                        <td>{{ $item->batch_id }}</td>
-                                        <td>{{ $item->student_id }}</td>
+                                        <td>{{ $item->batch->name }}</td>
+                                        <td>{{ $item->student->name }}</td>
                                         <td>{{ $item->join_date }}</td>
                                         <td>{{ $item->fee }}</td>
 
