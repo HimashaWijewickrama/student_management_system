@@ -54,8 +54,8 @@ class BatchController extends Controller
      */
     public function edit(string $id): view
     {
-        $batch = Batch::find($id);
-        return view('batches.edit')->with('batch', $batch);
+        $batches = Batch::find($id);
+        return view('batches.edit')->with('batch', $batches);
     }
 
     /**
@@ -63,9 +63,9 @@ class BatchController extends Controller
      */
     public function update(Request $request, string $id): RedirectResponse
     {
-        $batch = Batch::find($id);
+        $batches = Batch::find($id);
         $input = $request->all();
-        $batch->update($input);
+        $batches->update($input);
         return redirect('batches')->with('flash_message', 'Batch Updated!');
     }
 
